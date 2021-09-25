@@ -1,0 +1,333 @@
+@import url(fonts.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--background);
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* ROOT start */
+:root{
+    --background: #0C0C0C;
+    --text: #fff;
+    --btn: #69CF17;
+    --menu: #000;
+}
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--btn);
+    border-radius: 3px;
+}
+/* ROOT end */
+/* ============== */
+/* HEADER start */
+.ads a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.ads{
+    display: flex;
+    justify-content: space-between;
+    height: 59px;
+    align-items: center;
+}
+.headline{
+    background: var(--menu);
+}
+ul{
+    display: flex;
+}
+.ads__link{
+    margin-left: 20px;
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+}
+.ads__link_margin{
+    margin-left: 0;
+}
+.ads__icon{
+    margin-right: 5px;
+    line-height: 23px;
+    font-size: 20px;
+}
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    font-size: 18px;
+}
+.menu__link{
+    padding: 22px 14px;
+    color: var(--text);
+    transition: 0.5s;
+}
+.menu__link:hover{
+    background: rgba(105, 207, 23, 0.75);
+}
+.menu__link_active{
+    background: rgba(105, 207, 23, 0.75);
+}
+.nav__burger{
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    font-size: 50px;
+    color: var(--text);
+}
+nav{
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(125, 115, 115, 0.5);
+    border-top: 1px solid rgba(125, 115, 115, 0.5);
+    backdrop-filter: blur(15px);
+}
+.logo{
+    max-width: 216px;
+    width: 100%;
+    height: 53px;
+}
+.header__title{
+    color: var(--btn);
+    margin-bottom: 18px;
+    font-size: 72px;
+    font-weight: 900;
+    margin-top: 167px;
+}
+.header__subtitle{
+    color: var(--btn);
+    margin-bottom: 29px;
+    font-size: 36px;
+    line-height: 17px;
+    font-weight: 400;
+}
+.header__desc{
+    color: var(--text);
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.header{
+    background-image: url(../images/header_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+    margin-bottom: 48px;
+}
+.header__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.header__link{
+    font-weight: 100;
+    font-size: 50px;
+    line-height: 25px;
+    background: rgba(105, 207, 23, 0.5);
+    backdrop-filter: blur(18px);
+    max-width: 285px;
+    width: 100%;
+    padding-top: 33px;
+    padding-bottom: 45px;
+    text-align: center;
+    color: var(--text);
+}
+.header__btn{
+    background: linear-gradient(90deg, #69CF17 0%, #417D11 100%);
+    border-radius: 6px;
+    max-width: 255px;
+    width: 100%;
+    padding: 15px 71px 15px 68px;
+    font-size: 18px;
+    max-height: 51px;
+    margin-top: 26px;
+    color:var(--text)
+}
+.header__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HEADER end */
+/* =============== */
+/* MAIN start */
+.food__list{
+    height: 65px;
+    background: #292929;
+    box-shadow: 0px 1px 8px rgba(17, 17, 17, 0.3);
+}
+.food__menu{
+    padding: 21px;
+}
+.food__link{
+    color: var(--text);
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 21px;
+    padding: 20px 5px;
+    position: relative;
+}
+.food__link::after{
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: var(--text);
+    bottom: 0;
+    left: 50%;
+    content: '';
+    display: block;
+    transition: 0.5s;
+}
+.food__link:hover::after{
+    width: 100%;
+    left: 0;
+}
+.cards{
+    background: #393636;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+.card{
+    padding: 15px;
+    background: var(--background);
+    border: 1px solid var(--text);
+    position: relative;
+}
+.card__box{
+    position: relative;
+}
+.card__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__link{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: rgba(105, 207, 23, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.card:hover .card__link{
+    opacity: 1;
+}
+.card__icon{
+    color: var(--text);
+    font-size: 60px;
+    line-height: 60px;  
+}
+.card__title{
+    margin-top: 15px;
+    color: var(--text);
+    font-size: 19px;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+.card__desc{
+    font-size: 19px;
+    line-height: 25px;
+    color: var(--text);
+    margin-bottom: 39px;
+}
+.main__title{
+    text-transform: uppercase;
+    font-size: 55px;
+    color: rgba(105, 207, 23, 0.7);
+    text-shadow: 0px 0px 15px rgba(191, 171, 171, 0.4);
+    background: linear-gradient(0deg, rgba(12, 12, 12, 0.44), rgba(12, 12, 12, 0.44)), url(../images/cook.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    padding-top: 167px;
+}
+.main__desc{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    color: var(--text);
+    text-align: justify;
+    margin: 30px 0 33px 0;
+}
+.map__title{
+    text-align: center;
+    color: var(--btn);
+    padding: 20px;
+    background: var(--text);
+    line-height: 40px;
+    font-size: 50px;
+}
+.map__img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+/* MAIN end */
+/* =============== */
+/* FOOTER start */
+.phone{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    align-items: center;
+    margin-top: 16px;
+}
+.footer__link{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: var(--text);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.footer__menu{
+    margin-top: 130px;
+}
+.footer__content{
+    height: 268px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    background: linear-gradient(180deg, #000000 0%, rgba(105, 207, 23, 0.5) 100%);
+    padding-top: 30px;
+}
+.copyright{
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+}
+.footerline{
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 19px;
+}
+/* FOOTER end */
+/* =============== */
